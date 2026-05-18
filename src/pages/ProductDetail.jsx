@@ -23,11 +23,7 @@ const ProductDetail = () => {
         stock: 45, 
         sold: 1240, 
         category: "Premium",
-        images: [
-          "https://images.unsplash.com/photo-1644746339778-0d11db89d797?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1664271294066-2dfd418b15b1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1611864528242-2b79d5d92490?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        ]
+        images: ["https://images.unsplash.com/photo-1606741965326-cb990ae01bb2"]
       },
       { 
         id: 2, 
@@ -37,7 +33,7 @@ const ProductDetail = () => {
         stock: 22, 
         sold: 890, 
         category: "Premium",
-        images: ["https://images.unsplash.com/photo-1755719401938-35c1b24f6d15?q=80&w=1642&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1612858249816-5a91a9fb9886?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
+        images: ["https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb"]
       },
       { 
         id: 3, 
@@ -47,28 +43,81 @@ const ProductDetail = () => {
         stock: 98, 
         sold: 2340, 
         category: "Mid-range",
-        images: ["https://images.unsplash.com/photo-1578517581165-61ec5ab27a19?q=80&w=1486&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1642743200874-4675e7752cdb?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
+        images: ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e"]
       },
       { 
-      id: 4, 
-      name: "Samsung Galaxy Buds 3 Pro", 
-      price: 4200000, 
-      oldPrice: 4900000, 
-      stock: 67, 
-      sold: 1560, 
-      category: "Mid-range",
-      images: ["https://images.unsplash.com/photo-1705825859831-1fc8459c2d9c?q=80&w=1802&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
-    },
-    { 
-      id: 5, 
-      name: "Bose QuietComfort Ultra", 
-      price: 8900000, 
-      oldPrice: 10500000, 
-      stock: 18, 
-      sold: 650, 
-      category: "Premium",
-      images: ["https://images.unsplash.com/photo-1657223143975-d29d7959a70f?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1674658556545-f18d4080ab6c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
-    },
+        id: 4, 
+        name: "Samsung Galaxy Buds 3", 
+        price: 4200000, 
+        oldPrice: 4900000, 
+        stock: 67, 
+        sold: 1560, 
+        category: "Mid-range",
+        images: ["https://images.unsplash.com/photo-1600374917838-1df876d745c7"]
+      },
+      { 
+        id: 5, 
+        name: "Bose QuietComfort Ultra", 
+        price: 8900000, 
+        oldPrice: 10500000, 
+        stock: 18, 
+        sold: 650, 
+        category: "Premium",
+        images: [
+          "https://images.unsplash.com/photo-1657223143975-d29d7959a70f",
+          "https://images.unsplash.com/photo-1674658556545-f18d4080ab6c"
+        ]
+      },
+      { 
+        id: 6, 
+        name: "Apple AirPods Max", 
+        price: 13500000, 
+        oldPrice: 14500000, 
+        stock: 15, 
+        sold: 420, 
+        category: "Premium",
+        images: ["https://images.unsplash.com/photo-1628329567705-f8f7150c3cff"]
+      },
+      { 
+        id: 7, 
+        name: "Anker Soundcore Q35", 
+        price: 1850000, 
+        oldPrice: 2200000, 
+        stock: 120, 
+        sold: 1890, 
+        category: "Mid-range",
+        images: ["https://i.guim.co.uk/img/media/e03285f3793514a73726cc0edcd13014a6c00fe2/62_255_5388_3232/master/5388.jpg?width=445&dpr=1&s=none&crop=none"]
+      },
+      { 
+        id: 8, 
+        name: "Beats Studio Pro", 
+        price: 7500000, 
+        oldPrice: 8500000, 
+        stock: 35, 
+        sold: 980, 
+        category: "Premium",
+        images: ["https://images.unsplash.com/photo-1689357639029-f9397ac24b6a"]
+      },
+      { 
+        id: 9, 
+        name: "OneOdio Pro 10", 
+        price: 5200000, 
+        oldPrice: 5800000, 
+        stock: 55, 
+        sold: 1450, 
+        category: "Premium",
+        images: ["https://cdni.dienthoaivui.com.vn/x,webp,q100/https://dashboard.dienthoaivui.com.vn/uploads/wp-content/uploads/images/tai-nghe-chup-tai-co-day-oneodio-pro-10-pbl-1.jpg"]
+      },
+      { 
+        id: 10, 
+        name: "Marshall Major IV", 
+        price: 3200000, 
+        oldPrice: 3800000, 
+        stock: 80, 
+        sold: 780, 
+        category: "Mid-range",
+        images: ["https://images.unsplash.com/photo-1602833703296-0b79f0b08b0e"]
+      },
     ];
 
     const foundProduct = allProducts.find(p => p.id === parseInt(id));
@@ -87,33 +136,33 @@ const ProductDetail = () => {
     <div className="max-w-7xl mx-auto px-6 py-10">
       <button 
         onClick={() => navigate(-1)}
-        className="mb-8 text-indigo-600 hover:underline flex items-center gap-2"
+        className="mb-8 text-indigo-600 hover:underline flex items-center gap-2 text-lg"
       >
         ← Quay lại
       </button>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-     
 
-<div className="bg-white rounded-3xl shadow-2xl overflow-hidden aspect-square border">
-  <Swiper
-    modules={[Navigation, Pagination]}
-    pagination={{ clickable: true }}
-    navigation
-    className="w-full h-full"
-  >
-    {product.images.map((img, index) => (
-      <SwiperSlide key={index} className="relative w-full h-full">
-        <img 
-          src={img} 
-          className="absolute inset-0 w-full h-full object-cover" 
-          alt={product.name} 
-        />
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
-        {}
+        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden aspect-square flex items-center justify-center border p-6">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            pagination={{ clickable: true }}
+            navigation
+            className="w-full h-full"
+          >
+            {product.images.map((img, index) => (
+              <SwiperSlide key={index} className="flex items-center justify-center">
+                <img 
+                  src={img} 
+                  className="max-w-full max-h-full object-contain" 
+                  alt={product.name} 
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Thông tin sản phẩm */}
         <div className="space-y-6">
           <h1 className="text-4xl font-bold">{product.name}</h1>
           
@@ -138,7 +187,6 @@ const ProductDetail = () => {
             {product.stock > 0 ? `Còn ${product.stock} sản phẩm` : 'Hết hàng'}
           </p>
 
-          {}
           <div className="flex items-center gap-6">
             <span className="text-lg font-medium">Số lượng:</span>
             <div className="flex items-center border rounded-2xl">
@@ -152,7 +200,6 @@ const ProductDetail = () => {
             Thêm vào giỏ hàng
           </button>
 
-          {}
           {similar.length > 0 && (
             <div>
               <h3 className="font-semibold text-xl mb-4">Sản phẩm tương tự</h3>
