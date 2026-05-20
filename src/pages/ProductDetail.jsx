@@ -86,7 +86,7 @@ const ProductDetail = () => {
         stock: 120, 
         sold: 1890, 
         category: "Mid-range",
-        images: ["https://i.guim.co.uk/img/media/e03285f3793514a73726cc0edcd13014a6c00fe2/62_255_5388_3232/master/5388.jpg?width=445&dpr=1&s=none&crop=none"]
+        images: ["https://images.unsplash.com/photo-1765279302883-68bc58059bf4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QW5rZXIlMjBTb3VuZGNvcmV8ZW58MHx8MHx8fDA%3D"]
       },
       { 
         id: 8, 
@@ -162,7 +162,7 @@ const ProductDetail = () => {
           </Swiper>
         </div>
 
-        {/* Thông tin sản phẩm */}
+
         <div className="space-y-6">
           <h1 className="text-4xl font-bold">{product.name}</h1>
           
@@ -196,9 +196,24 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-6 text-xl font-semibold rounded-2xl transition">
-            Thêm vào giỏ hàng
-          </button>
+          <button 
+  onClick={() => {
+    const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existing = currentCart.findIndex(item => item.id === product.id);
+
+    if (existing !== -1) {
+      currentCart[existing].quantity += quantity;
+    } else {
+      currentCart.push({ ...product, quantity: quantity, image: product.images[0] });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(currentCart));
+    alert(`Đã thêm ${quantity} ${product.name} vào giỏ hàng!`);
+  }}
+  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-6 text-xl font-semibold rounded-2xl transition"
+>
+  Thêm vào giỏ hàng
+</button>
 
           {similar.length > 0 && (
             <div>
