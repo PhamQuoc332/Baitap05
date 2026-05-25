@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     if (!name || !email || !password) {
@@ -16,30 +18,48 @@ const Register = () => {
       return;
     }
 
+    try {
+      const res = await axios.post(
+        'http://localhost:3001/api/auth/register',
+        {
+          name,
+          email,
+          password
+        }
+      );
 
-    const newUser = {
-      id: Date.now(),
-      name: name,
-      email: email,
-      role: "member"
-    };
+      console.log(res.data);
 
-    localStorage.setItem('user', JSON.stringify(newUser));
-    
-    alert('Đăng ký thành công! Bạn sẽ được chuyển đến trang chủ.');
-    navigate('/');
+      alert('Đăng ký thành công!');
+
+      navigate('/login');
+
+    } catch (err) {
+      console.log(err);
+
+      setError('Đăng ký thất bại');
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
       <div className="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center mb-8">Đăng Ký Tài Khoản</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Đăng Ký Tài Khoản
+        </h2>
 
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+        {error && (
+          <p className="text-red-500 text-center mb-4">
+            {error}
+          </p>
+        )}
 
         <form onSubmit={handleRegister} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium mb-2">Họ và tên</label>
+            <label className="block text-sm font-medium mb-2">
+              Họ và tên
+            </label>
+
             <input
               type="text"
               value={name}
@@ -51,7 +71,10 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">Email</label>
+            <label className="block text-sm font-medium mb-2">
+              Email
+            </label>
+
             <input
               type="email"
               value={email}
@@ -63,7 +86,10 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">Mật khẩu</label>
+            <label className="block text-sm font-medium mb-2">
+              Mật khẩu
+            </label>
+
             <input
               type="password"
               value={password}
@@ -84,7 +110,10 @@ const Register = () => {
 
         <p className="text-center mt-6 text-gray-600">
           Đã có tài khoản?{' '}
-          <Link to="/login" className="text-indigo-600 hover:underline font-medium">
+          <Link
+            to="/login"
+            className="text-indigo-600 hover:underline font-medium"
+          >
             Đăng nhập
           </Link>
         </p>
